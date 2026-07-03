@@ -1,0 +1,19 @@
+{
+  "name": "ddos-sim-mitigation",
+  "version": "1.0.0",
+  "description": "Educational DDoS simulation and mitigation demo (local test server only)",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "start:protected": "MITIGATIONS=on node server/server.js",
+    "simulate:legit": "node attacker/simulate.js --mode legit",
+    "simulate:attack": "node attacker/simulate.js --mode attack",
+    "simulate:mixed": "node attacker/simulate.js --mode mixed"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
